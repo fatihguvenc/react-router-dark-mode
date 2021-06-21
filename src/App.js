@@ -13,15 +13,10 @@ import { lightTheme, darkTheme } from "./theme/theme";
 
 export default function App() {
   const [checked, setChecked] = React.useState(false);
-  // const [theme, setThemeObj] = React.useState(lightTheme);
 
   function themeChanger() {
     setChecked(checked.theme === "dark" ? lightTheme : darkTheme);
   }
-
-  // function themeHandler() {
-  //   setThemeObj(theme.theme === "light" ? darkTheme : lightTheme);
-  // }
   return (
     <Router>
       <div>
@@ -30,7 +25,7 @@ export default function App() {
           <div className="row mt-5">
             <div className="form-check form-switch my-5 mr-auto ml-auto">
               <input
-                onChange={themeChanger}
+                onClick={themeChanger}
                 className="form-check-input"
                 type="checkbox"
                 id="flexSwitchCheckChecked"
